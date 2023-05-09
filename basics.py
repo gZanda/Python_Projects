@@ -10,12 +10,6 @@ from abc import ABC, abstractclassmethod
 
 
 
-
-
-
-
-
-
 # Variable and Casting ( Variável sem escopo = GLOBAL) 
 print( "\nVarible Demonstration: " )
 
@@ -221,7 +215,7 @@ with open("file2.txt", "a") as file:            # (This is APPENTICE MODE)
 os.remove("file2.txt")
 print("File deleted Sucessfully! ")
 
-# Modeules ( outside functions ) ----------------------------------------------------
+# Modules ( outside functions ) ----------------------------------------------------
 print( "\nModule Demonstration: " )
 
 # Import no Início
@@ -419,3 +413,34 @@ class Book:
 b1 = Book(100)
 b2 = Book(200)
 print(b1 + b2)
+
+# Exceptions -------------------------------------------------------------------
+print( "\nException Demonstration: " )
+
+# User defined Exception
+class by3Exception(Exception):
+    def __init__(self,arg):
+        self.msg = arg
+
+
+# "Exception" type é o caso geral 
+n1 = int(input("Number 1: "))
+n2 = int(input("Number 2: "))
+
+try:
+    result = n1/n2                  # Can't be Zero or Wrong Types
+    print("Result =",result)
+    if(n2 == 3):
+        raise by3Exception("Division by 3 Alert !")
+except TypeError as e:              # e =  Cause of exception 
+    print("Error of Types -",e)
+except ZeroDivisionError as e:      # e =  Cause of exception 
+    print("Error of ZERO -",e)
+except Exception as e:              # e =  Cause of exception ( CASO GERAL )
+    print("Error -",e)
+else:
+    print("No errors at all")       # In case of no exception
+finally:
+    print("FINISH ! ! !")           # Always run
+
+# raise Exception ("And result greater than 2")   # Personal Exception
