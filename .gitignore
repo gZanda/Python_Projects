@@ -1,3 +1,4 @@
 .vscode/
 .pycache/
 __pycache__/
+*.txt

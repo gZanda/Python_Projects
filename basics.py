@@ -7,9 +7,6 @@ from abc import ABC, abstractclassmethod
 
 
 
-
-
-
 # Variable and Casting ( Variável sem escopo = GLOBAL) 
 print( "\nVarible Demonstration: " )
 
@@ -84,6 +81,16 @@ print(str1.islower())
 print(str2.replace("Dinamico","Acabado"))
 print(str1.split(","))  # Split vectors, lists, etc
 print(str2 * 3)
+
+# str.FORMAT --------------------------------------------------------------------
+print( "\nFORMAT Demonstration: " )
+
+print("I love pizza")
+print("{} love {}".format("I","Pizza"))
+print("{Who} love {What}".format(Who="I", What="Pizza"))
+who = "I"
+what = "Pizza"
+print("{} love {}".format(who,what))
 
 # List ( Array ) --------------------------------------------------------------------
 
@@ -165,55 +172,6 @@ def add(*args):
     return sum
 
 print(add(2,4,5))
-
-# str.FORMAT --------------------------------------------------------------------
-print( "\nFORMAT Demonstration: " )
-
-print("I love pizza")
-print("{} love {}".format("I","Pizza"))
-print("{Who} love {What}".format(Who="I", What="Pizza"))
-who = "I"
-what = "Pizza"
-print("{} love {}".format(who,what))
-
-# Exception Handle  -------------------------------------------------------------
-print( "\nException Demonstration: " )
-
-try:
-    numerator = int(input("Enter a number to divide: "))
-    denominator = int(input("Enter a number to divide by: "))
-    print(numerator/denominator)
-except Exception:        # "Exception" é a opção geral, o ideal é usar específicas
-    print("Ops, something wen wrong here")
-
-# Finding Files --------------------------------------------------------------------
-print( "\nFile Demonstration: " )
-
-where = "C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\Codes\\Python\\file.txt"
-if os.path.exists(where):
-    print("That location Exists", end=" ")
-    if os.path.isfile(where):
-        print("/ And it's a file")
-    else:
-        print("/ And it's not a file")
-else:
-    print("That location don't Exists")
-
-# Basic Files --------------------------------------------------------------------
-print( "\nFile Demonstration: " )
-
-try:
-    with open("file.txt") as file:
-        print(file.read())
-except FileNotFoundError:
-    print("Ops, file not found")
-
-# with open("file2.txt", "w") as file:            (this is WRITING MODE)
-with open("file2.txt", "a") as file:            # (This is APPENTICE MODE)
-    file.write("\nAi minha voaida di novo")
-
-os.remove("file2.txt")
-print("File deleted Sucessfully! ")
 
 # Modules ( outside functions ) ----------------------------------------------------
 print( "\nModule Demonstration: " )
@@ -444,3 +402,21 @@ finally:
     print("FINISH ! ! !")           # Always run
 
 # raise Exception ("And result greater than 2")   # Personal Exception
+
+# Exceptions -------------------------------------------------------------------
+print( "\n__name__ Demonstration: " )
+
+print(func.add(3,2))
+# Mesmo sem estar aqui o "print(add)" do "someFunctions" aparecia
+# Mas agora com a verificação de MAIN ou INPUT, não mais
+
+# Exceptions -------------------------------------------------------------------
+print( "\nFiles Demonstration: " )
+
+file = open("Example.txt","w")  # Opening for WRITING - Rewrite all that is in it
+
+file.write("Ai minha voaida\n")
+for i in range(1,11):
+    file.write("%d " %i)        # Tem que converter pois .txt apenas aceita STRING
+
+file.close()
