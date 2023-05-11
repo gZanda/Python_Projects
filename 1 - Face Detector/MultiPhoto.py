@@ -1,8 +1,8 @@
 import cv2, glob # glob = module to acess varios images
 
-all_images = glob.glob("*.jpg") # glob them all into the glob
+all_images = glob.glob("Images/*.jpg") # glob them all into the glob
 
-detect = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")   # Upload Classifier
+detect = cv2.CascadeClassifier("HaarAlgorithm/haarcascade_frontalface_default.xml")   # Upload Classifier
 
 for image in all_images:
     img = cv2.imread(image)

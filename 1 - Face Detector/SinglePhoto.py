@@ -1,7 +1,7 @@
 import cv2
 
-detect = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")   # Upload Classifier
-impImg1 = cv2.VideoCapture("Me and Rato 3.jpg") # Upload image
+detect = cv2.CascadeClassifier("HaarAlgorithm/haarcascade_frontalface_default.xml")   # Upload Classifier
+impImg1 = cv2.VideoCapture("Images/Me and Rato 3.jpg") # Upload image
 
 res, img = impImg1.read()  # Try to read ( img ) and store the dimensions ( res )
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    # Convert to Gray Scale img
@@ -13,5 +13,4 @@ for(x,y,w,h) in faces:
 
 cv2.imshow("Face Detection", img)
 cv2.waitKey(0)  # Image will be oppened untill closed
-impImg1.release()
 cv2.destroyAllWindows()
