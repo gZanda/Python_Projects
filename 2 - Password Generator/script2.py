@@ -4,7 +4,7 @@ import random
 special = ['@','#','$','%','&']
 word_list = []
 
-with open("wikipedia_text.txt",'r') as file:
+with open("SampleText/wikipedia_text.txt",'r') as file:
     data = file.readlines()     # Read line by line
 
     # Divide lines in a List of Words
