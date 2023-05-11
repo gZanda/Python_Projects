@@ -3,8 +3,6 @@ import someFunctions as func   # Para acessar as funções do outro arquivo
 # or "from someFunctions import *" to get ALL and acess without using the variable
 from abc import ABC, abstractclassmethod
 
-print("\n")
-
 # Variable and Casting ( Variável sem escopo = GLOBAL) 
 print( "\nVarible Demonstration: " )
 
@@ -292,7 +290,7 @@ class Employee1:
     def __init__(self,name,position,pay,reward):
         self.__name = name
         self.__position = position
-        self.__finalSalary = Salary(pay,reward) # __finalSalary CRIA um Objeto "Salary"
+        self.__finalSalary = Salary1(pay,reward) # __finalSalary CRIA um Objeto "Salary"
     
     def showSalary(self):
         return self.__finalSalary.calculateSalary() 
