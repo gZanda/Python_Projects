@@ -3,6 +3,10 @@ import someFunctions as func   # Para acessar as funções do outro arquivo
 # or "from someFunctions import *" to get ALL and acess without using the variable
 from abc import ABC, abstractclassmethod
 
+print("\n")
+
+
+
 
 
 
@@ -410,13 +414,37 @@ print(func.add(3,2))
 # Mesmo sem estar aqui o "print(add)" do "someFunctions" aparecia
 # Mas agora com a verificação de MAIN ou INPUT, não mais
 
-# Exceptions -------------------------------------------------------------------
+# Files ---------------------------------------------------------------------------
 print( "\nFiles Demonstration: " )
 
-file = open("Example.txt","w")  # Opening for WRITING - Rewrite all that is in it
+# W R I T I N G
+file = open("Example.txt","w")  # WRITING - Rewrite all that is in it
+#r+ -  Preserves previous content and append
+#w+ - Override previous content
 
-file.write("Ai minha voaida\n")
+file.write("Ai minha voaida\n") 
+file.write("Linha 2\n") 
+file.write("Linha 3\n") 
 for i in range(1,11):
     file.write("%d " %i)        # Tem que converter pois .txt apenas aceita STRING
+file.write("\n") 
 
 file.close()
+
+# R E A D I N G
+# Trabalha com POINTER de leitura ( cabeçote )
+file = open("Example.txt","r")
+
+print(file.read(2))       # Le até o 2 caracter
+file.seek(0)
+
+print(file.readlines()[0])     # Separa linhas como LISTAS ( só funciona sozinho )
+file.seek(0)
+
+print(file.readline())    # Vem com linha em branco automático
+file.seek(0)
+
+print(file.read())
+
+file.close()
+
