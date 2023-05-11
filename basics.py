@@ -5,12 +5,6 @@ from abc import ABC, abstractclassmethod
 
 print("\n")
 
-
-
-
-
-
-
 # Variable and Casting ( Variável sem escopo = GLOBAL) 
 print( "\nVarible Demonstration: " )
 
