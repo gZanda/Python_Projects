@@ -1,4 +1,5 @@
 # Reading Different Files
+# Mesmo código do "jupyter"
 import pandas
 
 df1 = pandas.read_csv("Jupyter/traffic.csv")
