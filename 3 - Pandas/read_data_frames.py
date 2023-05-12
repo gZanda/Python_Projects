@@ -10,6 +10,12 @@ df3 = pandas.read_json("Jupyter/traffic.json")
 
 df4 = pandas.read_csv("Jupyter/traffic-semi-colons.txt", sep=";") # Altera separador
 
+# Lendo CSV de uma API
+df5 = pandas.read_csv("https://raw.githubusercontent.com/uwlearning/pandas/master/traffic.csv")
+
+# Lendo JSON de uma API
+df6 = pandas.read_json("https://raw.githubusercontent.com/uwlearning/pandas/master/traffic.json")
+
 print(df1,"\n")
 print(df2,"\n")
 
@@ -21,4 +27,6 @@ df2 = df2.set_index("Date") # Save com novo Index
 
 print(df2,"\n")
 print(df3,"\n")
-print(df4)
+print(df4,"\n")
+print(df5,"\n")
+print(df6)
