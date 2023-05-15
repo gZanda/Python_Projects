@@ -14,7 +14,7 @@ def wallet():
 
     api_content = json.loads(api_request.content)
 
-    print("------------------------------")
+    print("U P D A T E")
 
     # Uma lista com um dicionário dentro ( WALLET )
     coins = [
@@ -80,7 +80,7 @@ def wallet():
     api_content = ""
 
     # Botão de Update ( faz um "refresh" nos dados )                    # SEM "()" aqui
-    name = Button(tk_inst,text="Button", bg="#1E1E1E", fg="White",command=wallet, font="Lato 12 bold", padx="5", pady="5", borderwidth=2, relief="groove")   
+    name = Button(tk_inst,text="Update", bg="#1E1E1E", fg="White",command=wallet, font="Lato 12 bold", padx="5", pady="5", borderwidth=2, relief="groove")   
     name.grid(row=row + 1,column=6, sticky=N+S+E+W)
 
 # Instance to use the module
