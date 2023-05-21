@@ -1,2 +1,3 @@
 # Python-Projects
-Projetos de Python ><
+
+Projetos feitos no Curso "Python A-Z" da Alura
